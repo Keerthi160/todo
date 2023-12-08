@@ -1,0 +1,26 @@
+
+<mat-toolbar color="primary">
+  <span>My Application</span>
+</mat-toolbar>
+
+<div class="container mt-5">
+ <div class="card-row">
+  <div class="task"> <div class="card-header">
+    <h1 class="text-center">{{title}}</h1>
+   </div>
+   <div class="card-body mt-5">
+    <app-form [taskList]="taskList"></app-form>
+
+   </div> </div>
+   <div class="card-body">
+   
+   
+       <app-grli [tasks]="taskList">
+        <h2 *ngIf="taskList.length">Todo List {{taskList.length}}</h2>
+        <h2 *ngIf="!taskList.length">Enter List</h2>
+      </app-grli>
+        
+    
+   </div>
+ </div>   
+</div>
